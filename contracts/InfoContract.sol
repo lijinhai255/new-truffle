@@ -2,28 +2,22 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract InfoContract {
-  string name;
-  uint256 age;
+    string name;
+    uint256 age;
 
-  constructor() {
+    event Instructor(string name, uint256 age);
 
-  }
-  event Instrutor(string name,uint256 age);
-  
-  function setInfo(string memory _name,uint256 _age) public{
-    name = _name;
-    age = _age;
-    emit Instrutor(name, age);
-  }
+    function setInfo(string memory _name, uint256 _age) public {
+        name = _name;
+        age = _age;
+        emit Instructor(_name, _age);
+    }
 
-  function sagHi() public pure returns (string memory) {
-    return "Hi";
-    
-  }
+    function sayHi() public pure returns (string memory) {
+        return "Hi";
+    }
 
-  function getInfo() public view returns (string memory,uint256){
-    return (name,age);
-  }
-
+    function getInfo() public view returns (string memory, uint256) {
+        return (name, age);
+    }
 }
-  
