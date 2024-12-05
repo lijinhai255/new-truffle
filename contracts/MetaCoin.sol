@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract MetaCoin is ERC20 {
     string public constant NAME = 'WEBAIERC20Token';
     string public constant SYMBOL = 'WEBAI';
-    uint256 public constant INITIAL_SUPPLY = 10000;
+    uint256 public constant INITIAL_SUPPLY = 100000;
 
     constructor() ERC20(NAME, SYMBOL) {
         _mint(msg.sender, INITIAL_SUPPLY);
